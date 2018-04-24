@@ -24,7 +24,7 @@ namespace MyBlogProject.Controllers
                 smtpClient.Port = 587;
                 smtpClient.Host = "smtp.gmail.com";
                 smtpClient.EnableSsl = true;
-                smtpClient.Credentials = new NetworkCredential("bariscanyilmazcontact@gmail.com", "Y!m@z13ar$C@n");
+                smtpClient.Credentials = new NetworkCredential("e posta adresi", "şifre");
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(contact.Mail, contact.NameSurname);
                 mail.To.Add(myMail);
