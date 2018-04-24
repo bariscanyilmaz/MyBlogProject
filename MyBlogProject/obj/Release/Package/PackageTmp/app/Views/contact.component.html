@@ -1,0 +1,43 @@
+﻿<form #contactForm="ngForm" class="Contact-form" (ngSubmit)="postForm()">
+    <div class="form-group">
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-user"></i></div></div>
+            <input #nameSurnameInput="ngModel" [(ngModel)]="model.NameSurname" type="text" required minlength="3" class="form-control" placeholder="Name" name="NameSurname" (keypress)="checkValeStr($event)">
+        </div>
+        <div *ngIf="nameSurnameInput.invalid && (nameSurnameInput.dirty || nameSurnameInput.touched )" class="alert alert-danger" role="alert">
+            Ad zorunlu ve en az üç karakter girilmeli
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-envelope"></i></div></div>
+            <input #emailInput="ngModel" [(ngModel)]="model.Mail" type="email" required class="form-control" [pattern]="pattern" placeholder="Mail" name="Mail">
+        </div>
+        <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched )" class="alert alert-danger" role="alert">
+            Email zorunlu
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-phone"></i></div></div>
+            <input #phoneNumberInput="ngModel" [(ngModel)]="model.PhoneNumber" required type="tel" class="form-control" placeholder="Phone number" name="PhoneNumber" (keypress)="checkVale($event)">
+        </div>
+        <div *ngIf="phoneNumberInput.invalid && (phoneNumberInput.dirty || phoneNumberInput.touched)" class="alert alert-danger" role="alert">
+            Telefon zorunlu
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group input-group-lg ">
+            <div class="input-group-prepend " style="width: 54px;"><div class="input-group-text"><i class="fa fa-terminal"></i></div></div>
+            <textarea #messageInput="ngModel" [(ngModel)]="model.Message" class="form-control" required maxlength="200" aria-label="Message" placeholder="Message" style="height:130px;" name="Message"></textarea>
+        </div>
+        <div *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)" class="alert alert-danger" role="alert">
+            Mesaj zorunlu
+        </div>
+    </div>
+    <ng2-google-recaptcha [siteKey]="recaptchaSiteKey"
+                          (onCaptchaComplete)="onCaptchaComplete($event)">
+    </ng2-google-recaptcha>
+    <input class="btn btn-success" type="submit"   [disabled]="!contactForm.valid || !chaptchaValid" value="Gönder" />
+</form>
+

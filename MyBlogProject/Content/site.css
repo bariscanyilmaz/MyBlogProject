@@ -1,0 +1,204 @@
+﻿img {
+    max-width: 100%;
+    height: auto;
+}
+
+span {
+    margin-top: 3px;
+}
+
+.container{
+    margin-top:74px;
+}
+
+*::-webkit-scrollbar-track, -ms-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+
+
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar, -ms-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb, -ms-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+/*Bottom LaunchPad */
+.bottom-launchPad {
+    display: none;
+}
+
+.bottom-launchPad a .ico {
+    font-size: 24px;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+
+/*Launch Pad*/
+.launchPad {
+    position: fixed;
+    z-index: 20;
+    top: 75px;
+    right: 10%;
+}
+
+.launchPad a .ico {
+    font-size: 24px;
+    height: 3rem;
+    width: 3rem;
+}
+
+.fa-medium {
+    color: black;
+}
+
+.fa-github {
+    color: #333;
+}
+
+.fa-linkedin {
+    color: #0077B5;
+}
+
+.fa-codepen {
+    color: #212121;
+}
+
+.fa-twitter {
+    color: #00aced;
+}
+
+.fa-envelope.ico {
+    color: #1E88E5;
+}
+
+.fa-instagram {
+    color: #D500F9;
+}
+
+
+.Me {
+    border: solid 1px #EF5350;
+    border-radius: 7px;
+}
+
+/*Portfolio-Photo*/
+
+.Profil-photo {
+    margin-top: -25px;
+    margin-right: 7%;
+}
+
+/*Blog component*/
+/*blog*/
+.blog {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.blog-image .date {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.date h5 {
+    width: 50%;
+}
+
+.image {
+    height: 100px !important;
+    width: none !important;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #2196F3;
+
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+
+    height: 3.5rem;
+    width: 3.5rem;
+
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:992px) {
+    .launchPad {
+        display: none !important;
+    }
+
+    .bottom-launchPad {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .launchPad {
+        display: none !important;
+    }
+
+    .bottom-launchPad {
+        display: block;
+    }
+
+    .Profil-photo {
+        margin-top: -60px;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .Profil-photo {
+        margin-top: -45px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .Profil-photo {
+        margin-top: -35px;
+    }
+
+    .bottom-launchPad a .ico {
+        font-size: 24px;
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+}

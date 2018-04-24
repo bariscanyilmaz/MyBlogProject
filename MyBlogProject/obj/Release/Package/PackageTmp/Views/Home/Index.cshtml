@@ -1,0 +1,143 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Barış Can Yılmaz</title>
+    <link href="~/Content/main.css" rel="stylesheet"  />
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <base href="/" />
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="m-auto">
+            <a class="navbar-brand mr-0" href="/"><i class="fas fa-code fa-2x"></i></a>
+        </div>
+    </nav>
+    <div class="position-fixed flex-column d-flex  launchPad">
+        <a href="https://github.com/ylmazbarscan">
+            <i class="fab fa-github ico "></i>
+        </a>
+        <a href="https://instagram.com/ylmazbarscan">
+            <i class="fab fa-instagram ico"></i>
+        </a>
+        <a href="https://twitter.com/ylmazbarscan">
+            <i class="fab fa-twitter ico"></i>
+        </a>
+        <a href="https://medium.com/%40ylmazbarscan">
+            <i class="fab fa-medium ico "></i>
+        </a>
+        <a href="https://tr.linkedin.com/in/barış-can-yılmaz-aba679131">
+            <i class="fab fa-linkedin ico"></i>
+        </a>
+        <a href="https://codepen.io/ylmazbarscan/">
+            <i class="fab fa-codepen ico"></i>
+        </a>
+        <a href="mailto:ylmazbarscan@outlook.com?Subject=Hi">
+            <i class="fas fa-envelope ico"></i>
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-3 leftPad">
+                <div class="d-flex flex-column mr-auto position-relative p-2 Me">
+                    <div class="Up-row">
+                        <img class="w-100 img-fluid rounded" src="/Images/1.jpg" alt="Twitter Profil" />
+                    </div>
+                    <div class="Profil-photo d-flex justify-content-end align-items-center">
+                        <img src="/Images/2.jpg" class="rounded-circle w-25 h-25" alt="Barış Can Yılmaz" />
+                    </div>
+                    <div class="Down-row">
+                        <h3 class="d-flex justify-content-center ">Barış Can Yılmaz</h3>
+                        <div class="d-flex flex-column align-items-center">
+                            <span class="badge badge-primary">Student at Uludag University</span>
+                            <span class="badge badge-secondary">ASP.NET MVC Developer</span>
+                            <span class="badge badge-success">JavaScript and TypeScript Lover!</span>
+                            <span class="badge bg-danger" style="color:white;">Angular <i class="fab fa-angular"></i></span>
+                            <span class="badge bg-info" style="color:white;">Groundbreakers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-7 rightPad" style="margin-bottom:65px;">
+                <h3>I am not a Hero! I am a Developer.</h3>
+
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content" style="margin-top:10px;">
+   
+                    <div id="blog" class="tab-pane active">
+                        <blog-app>
+                            <div class="d-flex justify-content-center"><div class="loader"></div></div>
+                        </blog-app>
+                    </div>
+                    <div id="contact" class="tab-pane fade">
+                        <contact-app>
+                            <div class=" d-flex justify-content-center"><div class="loader"></div></div>
+                        </contact-app>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <div class="bottom-launchPad mx-auto">
+            <a href="https://github.com/ylmazbarscan">
+                <i class="fab fa-github ico "></i>
+            </a>
+            <a href="https://instagram.com/ylmazbarscan">
+                <i class="fab fa-instagram ico"></i>
+            </a>
+            <a href="https://twitter.com/ylmazbarscan">
+                <i class="fab fa-twitter ico"></i>
+            </a>
+            <a href="https://medium.com/%40ylmazbarscan">
+                <i class="fab fa-medium ico "></i>
+            </a>
+            <a href="https://tr.linkedin.com/in/barış-can-yılmaz-aba679131">
+                <i class="fab fa-linkedin ico"></i>
+            </a>
+            <a href="https://codepen.io/ylmazbarscan/">
+                <i class="fab fa-codepen ico"></i>
+            </a>
+            <a href="mailto:ylmazbarscan@outlook.com?Subject=Hi">
+                <i class="fas fa-envelope ico"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- Polyfill(s) for older browsers -->
+    <script>
+        function animate() {
+            tab = document.getElementsByClassName('tab-pane').style.display = "none";
+            setTimeout(showPage,2500)
+        }
+
+        function showPage() {
+            loader = document.getElementsByClassName('loader').style.display = "none";
+            content = document.getElementsByClassName('active').style.display = "block";
+        }
+    </script>
+    <script src="/node_modules/core-js/client/shim.min.js"></script>
+    <script src="/node_modules/zone.js/dist/zone.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="~/systemjs.config.js"></script>
+    <script>
+        System.import('app/main.js').catch(function (err) { console.error(err); });
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <!--Jquery and Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

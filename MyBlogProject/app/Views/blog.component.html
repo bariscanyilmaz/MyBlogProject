@@ -1,0 +1,20 @@
+﻿<div #blog id="scrollbar" class="scrollbar">
+    <div *ngFor="let blog of blogList  " class="d-flex flex-wrap">
+        <div class="blog">
+            <div>
+                <div class="blog-image">
+                    <div class="date">
+                        <h5>{{blog.pubDate |  date:'MMM d y'}}</h5>
+                    </div>
+                    <img class="image" [src]="blog.thumbnail" [alt]="blog.title" />
+                </div>
+            </div>
+            <p class="blog-title align-content-center">
+                {{blog.title}}
+            </p>
+            <div class="blog-link">
+                <a href="{{blog.link }}">Go Medium Posts</a>
+            </div>
+        </div>
+    </div>
+</div>
